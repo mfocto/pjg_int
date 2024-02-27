@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<script>
+    {%if message != ''%}
+        const message = '{{message}}';
+        alert(message);
+    {%endif%}
+    function clickSubmit() {
+        const keyInput = document.getElementById('keyword');
+        if (keyInput.value === '' || keyInput.value === null) {
+            
+        }
+    }
+</script>
+<body>
+    <h1>Burger search</h1>
+    <form id="burgers" method="get">
+        <input name="keyword" id="keyword">
+        <button type="button" onclick="clickSubmit">search</button>
+    </form>
+    {%for burger in burgers%}
+        <div>{{burger}}</div>
+    {%endfor%}
+</body>
+</html>
